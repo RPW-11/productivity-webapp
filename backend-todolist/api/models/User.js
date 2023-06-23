@@ -29,10 +29,16 @@ module.exports = {
       type: 'string',
     },
 
+    // relation to task
     tasks: {
       collection: 'task',
       via: 'ownerId',
     },
+    // relation to tag
+    tag: {
+      collection: 'tag',
+      via: 'ownerId',
+    }
 
   },
 

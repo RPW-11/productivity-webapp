@@ -17,10 +17,15 @@ module.exports = {
       type: 'string',
       required: false,
     },
+    tags: {
+      type: 'ref'
+    },
 
     ownerId: {
-      model: 'user'
-    }
+      model: 'user',
+      required: true
+    },
+    
 
   },
 

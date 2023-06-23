@@ -37,8 +37,7 @@ module.exports = {
                     firstName: firstName,
                     lastName: lastName,
                     email: email,
-                    password: password,
-                    token: 'yess sir'
+                    password: password
                 });
             }
 
