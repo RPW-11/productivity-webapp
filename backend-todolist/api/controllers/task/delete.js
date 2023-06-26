@@ -1,6 +1,6 @@
 module.exports = {
     inputs: {
-        _id: {
+        id: {
             type: 'string',
             required: true
         }
@@ -8,9 +8,9 @@ module.exports = {
 
     fn: async (inputs, exits) => {
         try {
-            let { _id } = inputs;
+            let { id } = inputs;
             await sails.models.task.destroy({
-                _id: _id
+                id: id
             })
             return exits.success("Task is deleted");
         } catch (error) {

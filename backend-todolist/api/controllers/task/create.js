@@ -23,9 +23,12 @@ module.exports = {
             description = description.trim();
 
             // check the existing tag and add the new tags
-            const existingTag = await sails.models.tag.findOne({ownerId: ownerId}).tags;
+            var existingTag = await sails.models.tag.findOne({ownerId: ownerId});
+            existingTag = existingTag.tags
+            console.log(existingTag);
             if (tags){
-                await tags.forEach((item) => {
+                console.log(tags);
+                tags.forEach((item) => {
                     if(!existingTag.includes(item)){
                         existingTag.push(item);
                     }
